@@ -1,0 +1,13 @@
+{
+  "name": "docker_1",
+  "version": "1.0.0",
+  "description": "Node.js on Docker test",
+  "author": "Banger",
+  "main": "server.js",
+  "scripts": {
+    "start": "node /lib/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
