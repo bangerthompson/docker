@@ -1,13 +1,14 @@
-'use strict';
-
-const express = require('express');
-const app = express();
+const EXPRESS = require('express');
+const APP = EXPRESS();
 const HOST = '0.0.0.0';
-const PORT = 80;
+const EXPOSED_IP = '192.168.50.101';
+const PORT = 8080;
 
-app.get('/', (req,res) => {
-	res.send('Hello to this bright and wonderful world.');
+APP.get('/', (req,res) => {
+	// res.set('Content-Type', 'text/html');
+	// res.send('Hello to this bright and wonderful world.  Josh can go and...');
+	res.json( { message: 'Hello to this bright and wonderful world.  A ray of sunshine to you.' } );
 });
 
-app.listen(PORT, HOST);
-console.log(`server running, on http://${HOST}:${PORT}`);
+APP.listen(PORT, HOST);
+console.log(`server running, on http://${EXPOSED_IP}:${PORT}`);
